@@ -49,7 +49,7 @@ def all_winter_holiday_supplies(holiday_hash)
     i = 0
     while i < supplies.length do
       winter_supplies.push(supplies[i])
-      i += 0
+      i += 1
     end
   end
   return winter_supplies
