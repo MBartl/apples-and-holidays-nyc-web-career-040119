@@ -71,6 +71,7 @@ def all_supplies_in_holidays(holiday_hash)
       day_holder = holiday.to_s.split
       day_holder.capitalize!
       output.push("#{day_holder}: #{supplies.join(', ')}")
+    end
   end
   return output.join('\r\n')
 end
