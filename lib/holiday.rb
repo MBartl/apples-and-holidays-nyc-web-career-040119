@@ -88,7 +88,7 @@ def all_supplies_in_holidays(holiday_hash)
       output.push("  #{holiday_name}: #{supplies_name}")
     end
   end
-  output.join
+  output.join(\n)
 end
 
 def all_holidays_with_bbq(holiday_hash)
