@@ -68,7 +68,8 @@ def all_supplies_in_holidays(holiday_hash)
   # return the second element in the 4th of July array
   output = []
   holiday_hash.each do |season, holidays|
-    season_name = season.to_s.capitalize!
+    season_name = season.to_s
+    season_name.capitalize!
     output.push("#{season_name}:")
   end
   output
