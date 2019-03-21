@@ -84,8 +84,8 @@ def all_supplies_in_holidays(holiday_hash)
       else
         holiday_name.capitalize!
       end
-      supplies.join(", ")
-      output.push("#{holiday_name}: #{supplies}")
+      supplies_name = supplies.join(", ")
+      output.push("#{holiday_name}: #{supplies_name}")
     end
   end
   output.join('\n')
