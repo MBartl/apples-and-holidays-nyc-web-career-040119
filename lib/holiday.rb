@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   output = ''
   holiday_hash.each do |season, holidays|
-    output = ("dumblab")
+    output = ("Winter:")
   end
   return output
 end
