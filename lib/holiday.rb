@@ -74,13 +74,13 @@ def all_supplies_in_holidays(holiday_hash)
     holiday_hash[season].each do |holiday, supplies|
       holiday_name = holiday.to_s
       if holiday_name.include? ("_")
-        holiday_name.split(/_/)
+        holiday_name_split = holiday_name.split(/_/)
         i = 0
-        while i < holiday_name.length do
-          holiday_name[i].capitalize!
+        while i < holiday_name_split.length do
+          holiday_name_split[i].capitalize!
           i += 1
         end
-        holiday_name.join(" ")
+        holiday_name = holiday_name_split.join(" ")
       else
         holiday_name.capitalize!
       end
