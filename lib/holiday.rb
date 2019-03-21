@@ -91,6 +91,7 @@ def all_supplies_in_holidays(holiday_hash)
   i = 0
   while i < output.length do
     puts output[i]
+    i += 1
   end
 end
 
