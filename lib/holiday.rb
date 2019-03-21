@@ -69,14 +69,17 @@ def all_supplies_in_holidays(holiday_hash)
     output.push("#{season.to_s.capitalize!}:")
     holiday_hash[season].each do |holiday, supplies|
       day_holder = holiday.to_s
-      day_holder.include? ' ' do
+      if day_holder.include? ' '
         day_holder.split(/ /)
         i = 0
         while i < day_holder.length do
-          day_holder[i].capitalize
+          day_holder[i].capitalize!
+          i += 1
+        end
+        day_holder.join(' ')
+      else
+        day_holder.capitalize!
       end
-      day_holder.capitalize!
-      day_holder.join(' ')
       output.push("#{day_holder}: #{supplies.join(', ')}")
     end
   end
