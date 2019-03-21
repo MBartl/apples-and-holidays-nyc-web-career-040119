@@ -70,7 +70,7 @@ def all_supplies_in_holidays(holiday_hash)
     season.each do 
       output
   end
-  return output.join('\n')
+  return output.join('\r\n')
 end
 
 def all_holidays_with_bbq(holiday_hash)
