@@ -72,10 +72,23 @@ def all_supplies_in_holidays(holiday_hash)
     season_name.capitalize!
     output.push("#{season_name}:")
     holiday_hash[season].each do |holiday, supplies|
-      puts "#{holiday}: #{supplies}}"
+      holiday_name = holiday.to_s
+      if holiday_name.include? " "
+        holiday_name.split(/ /)
+        i = 0
+        while i < holiday_name.length do
+          holiday_name[i].capitalize!
+          i += 1
+        end
+        holiday_name.join(" ")
+      else
+        holiday_name.capitalize!
+      end
+      supplies.join(", ")
+      output.push("#{holiday_name}: #{supplies}")
     end
   end
-  output
+  output.join('/n')
 end
 
 def all_holidays_with_bbq(holiday_hash)
