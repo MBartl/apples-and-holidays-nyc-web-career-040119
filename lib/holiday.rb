@@ -66,9 +66,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   output = []
   holiday_hash.each do |season, holidays|
-    season.to_s
-    season.capitalize!
-    output.push("#{season}:")
+    season_holder = season.to_s
+    season_holder.capitalize!
+    output.push("#{season_holder}:")
     holiday_hash[season].each do |holiday, supplies|
       day_holder = holiday.to_s
       if day_holder.include? ' '
