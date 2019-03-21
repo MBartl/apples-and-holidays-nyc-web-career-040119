@@ -70,7 +70,10 @@ def all_supplies_in_holidays(holiday_hash)
     holiday_hash[season].each do |holiday, supplies|
       day_holder = holiday.to_s
       day_holder.include? ' ' do
-        day_holder.split(" ")
+        day_holder.split(/ /)
+        i = 0
+        while i < day_holder.length do
+          day_holder[i].capitalize
       end
       day_holder.capitalize!
       day_holder.join(' ')
